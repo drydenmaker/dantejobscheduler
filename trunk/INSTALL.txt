@@ -1,0 +1,7 @@
+Dante Job Scheduler
+INSTALLATION
+
+Simply point your PHP 5.3 enabled IIS at this directory as the root of a website.
+Make sure .\theme\default\tpl\ is writable.
+
+Run at your own risk :)
