@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.chicklet
+{
+	margin-bottom: -1em;
+}
+
+.chicklet-active
+{
+	padding-bottom: 1em;
+}
+
+ul.ui-tabs-nav
+{
+	
+}
+
+
+
