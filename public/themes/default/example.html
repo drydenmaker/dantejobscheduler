@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Dante Default Theme</title>
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/autoresize.jquery.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/jquery.jqGrid.min.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/jquery.jeditable.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/jquery.gritter.js"></script>
+	
+	<link rel="stylesheet" href="css/jquery-ui.custom.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="css/jquery.gritter.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="css/jquery.timepickr.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="css/ui.grid.css" type="text/css" media="screen, projection">
+	
+	<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+	
+	<link rel="stylesheet" href="css/generic.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="css/custom.css" type="text/css" media="screen, projection">
+  </head>
+  <body>
+  	<div class="container">
+		<div id="title_header">
+			<div id="logo"></div>
+		</div>
+		<!-- navigation:START -->
+		<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">  		
+			<div id="public_nav">
+				<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a>Home</a></li>
+					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a>Create</a></li>
+					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a>Status</a></li>
+				</ul>
+			</div>
+		
+		<!-- navigation:END -->
+		
+			<div id="content">
+			<!-- content:START -->
+			
+			<div class="pad-15">
+			<h3>Control Examples</h3>  
+			  
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Accordion</a></li>
+					<li><a href="#tabs-2">Datepicker</a></li>
+					<li><a href="#tabs-3">Sliders</a></li>
+					<li><a href="#tabs-4">Misc</a></li>
+				</ul>
+				<div id="tabs-1">
+					
+					
+					<div id="accordion">
+						<h3><a href="#">Section 1</a></h3>
+						<div>
+							<p>
+							Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+							ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+							amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+							odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+							</p>
+						</div>
+						<h3><a href="#">Section 2</a></h3>
+						<div>
+							<p>
+							Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+							purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+							velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+							suscipit faucibus urna.
+							</p>
+						</div>
+						<h3><a href="#">Section 3</a></h3>
+						<div>
+							<p>
+							Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+							Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+							ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+							lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+							</p>
+							<ul>
+								<li>List item one</li>
+								<li>List item two</li>
+								<li>List item three</li>
+							</ul>
+						</div>
+						<h3><a href="#">Section 4</a></h3>
+						<div>
+							<p>
+							Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+							et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+							faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+							mauris vel est.
+							</p>
+							<p>
+							Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+							Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+							inceptos himenaeos.
+							</p>
+						</div>
+					</div>
+					<script type="text/javascript">
+						$(function() {
+							$("#accordion").accordion();
+						});
+					</script>
+
+					
+				</div>
+				<div id="tabs-2">
+					
+					
+					<form>
+						<p>Date: <input id="datepicker" type="text"></p>
+						<input type="checkbox">checkbox<br>
+						<input type="radio">radio<br>
+						<select>
+							<option>select</option>
+						</select><br><br>
+						<textarea>textarea</textarea><br>
+					</form>
+					
+					<script type="text/javascript">
+						$(function() {
+							$("#datepicker").datepicker();
+						});
+					</script>
+
+					
+				</div>
+				<div id="tabs-3">
+					
+					<div class="demo">
+						<div id="slider"></div>
+	
+						<p>The basic slider is horizontal and has a single handle that can be moved with the mouse or by using the arrow keys.</p>
+	
+						
+						<script type="text/javascript">
+						$(function() {
+							$("#slider").slider();
+						});
+						</script>
+					</div>
+					<div class="demo">
+						
+						<p>
+						<label for="amount">Price range:</label>
+						<input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;" />
+						</p>
+						
+						<div id="slider-range"></div>
+										
+						
+						<div class="demo-description">
+						<p>Set the <code>range</code> option to true to capture a range of values with two drag handles.  The space between the handles is filled with a different background color to indicate those values are selected.</p>
+						</div>
+						
+						<script type="text/javascript">
+						$(function() {
+							$("#slider-range").slider({
+								range: true,
+								min: 0,
+								max: 500,
+								values: [75, 300],
+								slide: function(event, ui) {
+									$("#amount").val('$' + ui.values[0] + ' - $' + ui.values[1]);
+								}
+							});
+							$("#amount").val('$' + $("#slider-range").slider("values", 0) + ' - $' + $("#slider-range").slider("values", 1));
+						});
+						</script>
+
+					</div>
+					<div class="demo">
+
+						<p>
+						<label for="amount">Volume:</label>
+						<input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;" />
+						</p>
+						
+						<div id="slider-vertical" style="height:200px;"></div>
+						
+						<p>Change the orientation of the slider to vertical.  Assign a height value via <code>.height()</code> or by setting the height through CSS, and set the <code>orientation</code> option to "vertical."</p>
+						
+						<script type="text/javascript">
+						$(function() {
+							$("#slider-vertical").slider({
+								orientation: "vertical",
+								range: "min",
+								min: 0,
+								max: 100,
+								value: 60,
+								slide: function(event, ui) {
+									$("#amount").val(ui.value);
+								}
+							});
+							$("#amount").val($("#slider-vertical").slider("value"));
+						});
+						</script>
+
+					
+					</div><!-- End demo -->
+				</div>				
+				<div id="tabs-4">
+					<div class="demo">
+						
+						<div id="dialog" title="Basic dialog" class="ui-helper-hidden">
+							<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+						</div>
+	
+						<button id="dialog_button">Dialog</button>
+						
+						<div class="hiddenInViewSource" style="padding: 20px;">
+						<p>Sed vel diam id libero <a href="http://example.com">rutrum convallis</a>. Donec aliquet leo vel magna. Phasellus rhoncus faucibus ante. Etiam bibendum, enim faucibus aliquet rhoncus, arcu felis ultricies neque, sit amet auctor elit eros a lectus.</p>
+						<form>
+							<input value="text input"><br>
+							<input type="checkbox">checkbox<br>
+							<input type="radio">radio<br>
+							<select>
+								<option>select</option>
+							</select><br><br>
+							<textarea>textarea</textarea><br>
+						</form>
+						</div>
+						
+						<script type="text/javascript">
+							$(function() {
+								$("#dialog_button").button().click(function(){
+									$("#dialog").dialog();
+								});							
+							});
+						</script>
+					
+					</div>
+					<div class="demo">
+						<div id="progressbar"></div>
+						
+						<p>Default determinate progress bar.</p>
+						
+						<script type="text/javascript">
+							$(function() {
+								$("#progressbar").progressbar({
+									value: 37
+								});
+							});
+						</script>
+						
+					</div>
+
+
+					
+				</div><!-- tabs 4 -->
+			</div>
+			
+			<script type="text/javascript">
+				$(function() {
+					$("#tabs").tabs();
+				});
+			</script>
+	  
+			</div>  
+			
+			
+			<!-- content:END -->
+			</div>
+			
+		</div>
+  	</div>
+  </body>
+</html>
