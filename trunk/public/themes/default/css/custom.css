@@ -323,3 +323,16 @@ thead th
 {
 	line-height: .9;
 }
+
+#master_container
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width: 960px;
+}
+
+#main_body
+{
+	overflow: hidden;
+}

@@ -2,39 +2,13 @@
 // make sure you comment this file!
 class Handle_Index_Index implements X_Controller_Handler_Interface
 {
-    /**
-     * mysqli connection
-     *
-     * @var unknown_type
-     */
-    protected $oMySQLi;
-    /**
-     * mysql object
-     *
-     * @var X_DB_MySQL
-     */
-    protected $oDB;
-    /**
-     * mysql adaptor
-     *
-     * @var X_DB_MySQL_Adapter
-     */
-    protected $oAdapter;
+	/**
+	 * indicate if this is a secure handler 
+	 *
+	 * @var bool
+	 */
+	public $isSecure = false;
 
-    /**
-     * use the registry to setup db connections
-     *
-     */
-    public function setDb()
-    {
-        static $bSet = false;
-
-        if (!$bSet)
-        {
-            // @todo write db connection code
-            $bSet = true;
-        }
-    }
     /**
 	 * handle input
 	 *
@@ -43,11 +17,17 @@ class Handle_Index_Index implements X_Controller_Handler_Interface
 	 */
 	public function handle(X_Broker_Event_Interface $oEvent)
     {
-        return file_get_contents(X_Broker::getRegistered('theme_dir').'tpl/frames.tpl.html');
+        $aLayoutBody = array(
+            'nav_column' => X_broker::callLoopback('/home/menu')
+            ,'main_body' => X_broker::callLoopback('/tasks/list')
+        );
+        
+        return X_Array_Tokenizer::combine($aLayoutBody, X_Broker::getRegistered('theme_dir').'/tpl/layout.tpl.html');
+
+        // do some stuff to handle the $xData
+//        return 'You have reached an event that has not been handled yet.  (Handeler)<br>'.
+//            X_Debug::formatHtml($oEvent, '$xData');
+        
     }
 
-    public function getResponseType()
-    {
-        return X_Broker_Response::ENCODE_HTML;
-    }
 }

@@ -3,6 +3,12 @@
 class Handle_Tasks_Xml extends Handle_Tasks_View
 {
     /**
+	 * indicate if this is a secure handler 
+	 *
+	 * @var bool
+	 */
+	public $isSecure = false;
+    /**
 	 * handle input
 	 *
 	 * @param Array Filtered SAE (Simple Array Event) Array

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	
+	<title>[::page_title::]</title>
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/autoresize.jquery.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/jquery.jqGrid.min.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/jquery.jeditable.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/jquery.gritter.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/jqdom.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/jquery.form.js"></script>
+	<script type="text/javascript" src="/js/jquery_plugins/timepickr/ui.timepickr.min.js"></script>
+	
+	<script type="text/javascript" src="/js/crossley.js"></script>
+	<script type="text/javascript" src="/js/xLoader.js"></script>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"> </script>
+	
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/jquery-ui.custom.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/jquery.gritter.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/jquery.timepickr.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/ui.grid.css" type="text/css" media="screen, projection">
+	
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/blueprint/screen.css" type="text/css" media="screen, projection">
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/themes/[::theme_name::]/css/blueprint/ie.css" type="text/css" media="screen, projection">
+        <link rel="stylesheet" href="/themes/[::theme_name::]/css/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
+	
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/generic.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/custom.css" type="text/css" media="screen, projection">
+	
+	[::head_items::]
+  </head>
+  <body>
+  
+<!--  chrome frame STUFF -->
+<div id="placeholder"></div>
+<script>
+ CFInstall.check({
+    node: "placeholder",
+    destination: "http://www.waikiki.com"
+  });
+</script>
+<!-- END chrome frame -->
+  
+  	<div id="master_container">
+		<div id="title_header">
+			<div id="logo"></div>
+		</div>
+		<!-- navigation:START -->
+		<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">  		
+			<div id="public_nav">
+				<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a>Home</a></li>
+					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a>Create</a></li>
+					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a>Status</a></li>
+				</ul>
+			</div>
+		
+		<!-- navigation:END -->
+		
+			<div id="content" class="container">
+			<!-- content:START -->
+
+[::body::]
+
+			<!-- content:END -->
+			<hr class="space" />
+			</div>
+			
+		</div>
+  	</div>
+  </body>
+</html>
