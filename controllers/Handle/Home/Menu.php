@@ -1,40 +1,13 @@
 <?php
 // make sure you comment this file!
 class Handle_Home_Menu implements X_Controller_Handler_Interface
-{
+{   
     /**
-     * mysqli connection
-     *
-     * @var unknown_type
-     */
-    protected $oMySQLi;
-    /**
-     * mysql object
-     *
-     * @var X_DB_MySQL
-     */
-    protected $oDB;
-    /**
-     * mysql adaptor
-     *
-     * @var X_DB_MySQL_Adapter
-     */
-    protected $oAdapter;
-
-    /**
-     * use the registry to setup db connections
-     *
-     */
-    public function setDb()
-    {
-        static $bSet = false;
-
-        if (!$bSet)
-        {
-            // @todo write db connection code
-            $bSet = true;
-        }
-    }
+	 * indicate if this is a secure handler 
+	 *
+	 * @var bool
+	 */
+	public $isSecure = false;
     /**
 	 * handle input
 	 *
@@ -44,11 +17,10 @@ class Handle_Home_Menu implements X_Controller_Handler_Interface
 	public function handle(X_Broker_Event_Interface $oEvent)
     {
         return X_Array_Tokenizer::combine(array(
-				'title' => "Menu",
+				'title' => null,
 				'menu' => array(
-					array('title' => 'View Tasks', 'link' => '/tasks/list/')
-					,array('title' => 'New Task', 'link' => '/tasks/new/')
-					
+                    array('title' => 'List Tasks', 'link' => '/tasks/list/', 'target' => 'main_body')
+					, array('title' => 'New Task', 'link' => '/tasks/new/', 'target' => '_modal')					
 				)
 			),
 			X_Broker::getRegistered('theme_dir').'/tpl/menu.tpl.html');

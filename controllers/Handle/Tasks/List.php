@@ -3,38 +3,11 @@
 class Handle_Tasks_List implements X_Controller_Handler_Interface
 {
     /**
-     * mysqli connection
-     *
-     * @var unknown_type
-     */
-    protected $oMySQLi;
-    /**
-     * mysql object
-     *
-     * @var X_DB_MySQL
-     */
-    protected $oDB;
-    /**
-     * mysql adaptor
-     *
-     * @var X_DB_MySQL_Adapter
-     */
-    protected $oAdapter;
-
-    /**
-     * use the registry to setup db connections
-     *
-     */
-    public function setDb()
-    {
-        static $bSet = false;
-
-        if (!$bSet)
-        {
-            // @todo write db connection code
-            $bSet = true;
-        }
-    }
+	 * indicate if this is a secure handler 
+	 *
+	 * @var bool
+	 */
+	public $isSecure = false;
     /**
 	 * handle input
 	 *
@@ -52,7 +25,7 @@ class Handle_Tasks_List implements X_Controller_Handler_Interface
 		}
 
         return X_Array_Tokenizer::combine(array(
-				'title' => "Currently Registered Tasks",
+				'title' => "Scheduled Tasks",
 				'tasks' => $aTasks
 			),
 			  X_Broker::getRegistered('theme_dir').'/tpl/tasklist.tpl.html');
