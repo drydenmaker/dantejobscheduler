@@ -24,7 +24,7 @@ class Handle_Tasks_New implements X_Controller_Handler_Interface
     		
     		if ($oTaskService->register($oEvent->getData('taskname')))
     		{
-    			return '<h3>task saved</h3>';    		
+    			return '<h3>task '.$oEvent->getData('taskname').' saved</h3>';    		
     		}
     		else 
     		{
