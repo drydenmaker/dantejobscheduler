@@ -18,8 +18,9 @@ class Handle_Index_Index implements X_Controller_Handler_Interface
 	public function handle(X_Broker_Event_Interface $oEvent)
     {
         $aLayoutBody = array(
-            'nav_column' => X_broker::callLoopback('/home/menu')
-            ,'main_body' => X_broker::callLoopback('/tasks/list')
+            'main_body' => X_broker::callLoopback('/tasks/list')
+            ,'create' => X_broker::callLoopback('/tasks/new')
+            ,'edit' => "Select a task to edit from the task list"
         );
         
         return X_Array_Tokenizer::combine($aLayoutBody, X_Broker::getRegistered('theme_dir').'/tpl/layout.tpl.html');

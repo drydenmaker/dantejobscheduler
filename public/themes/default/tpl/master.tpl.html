@@ -14,6 +14,8 @@
 	<script type="text/javascript" src="/js/jquery_plugins/jquery.gritter.js"></script>
 	<script type="text/javascript" src="/js/jquery_plugins/jqdom.js"></script>
 	<script type="text/javascript" src="/js/jquery_plugins/jquery.form.js"></script>
+	
+	<script type="text/javascript" src="/js/jquery_plugins/util/jquery.utils.min.js"></script> 
 	<script type="text/javascript" src="/js/jquery_plugins/timepickr/ui.timepickr.min.js"></script>
 	
 	<script type="text/javascript" src="/js/crossley.js"></script>
@@ -23,8 +25,11 @@
 	
 	<link rel="stylesheet" href="/themes/[::theme_name::]/css/jquery-ui.custom.css" type="text/css" media="screen, projection">
 	<link rel="stylesheet" href="/themes/[::theme_name::]/css/jquery.gritter.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="/themes/[::theme_name::]/css/jquery.timepickr.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="/themes/[::theme_name::]/css/ui.grid.css" type="text/css" media="screen, projection">
+	
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/ui.core.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/ui.timepickr.css" type="text/css" media="screen, projection">
+	
+	<link rel="stylesheet" href="/themes/[::theme_name::]/css/ui.jqgrid..css" type="text/css" media="screen, projection">
 	
 	<link rel="stylesheet" href="/themes/[::theme_name::]/css/blueprint/screen.css" type="text/css" media="screen, projection">
     <!--[if lt IE 8]>
@@ -40,6 +45,7 @@
   <body>
   
 <!--  chrome frame STUFF -->
+<!--[if lt IE 9]>
 <div id="placeholder"></div>
 <script>
  CFInstall.check({
@@ -47,34 +53,18 @@
     destination: "http://www.waikiki.com"
   });
 </script>
+<![endif]-->
 <!-- END chrome frame -->
   
   	<div id="master_container">
 		<div id="title_header">
 			<div id="logo"></div>
 		</div>
-		<!-- navigation:START -->
-		<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">  		
-			<div id="public_nav">
-				<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a>Home</a></li>
-					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a>Create</a></li>
-					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a>Status</a></li>
-				</ul>
-			</div>
-		
-		<!-- navigation:END -->
-		
-			<div id="content" class="container">
-			<!-- content:START -->
+		<!-- content:START -->
 
 [::body::]
 
-			<!-- content:END -->
-			<hr class="space" />
-			</div>
-			
-		</div>
+	     <!-- content:END -->
   	</div>
   </body>
 </html>

@@ -20,7 +20,7 @@ class Handle_Tasks_New implements X_Controller_Handler_Interface
     	if ($oEvent->getData('rundate'))
     	{
     		$oTaskService = new X_Scheduler_Ms_Service();
-    		$oTaskService->scheduleCommand($oEvent->getData('cmd'), strtotime($oEvent->getRawData('rundate').' '.$oEvent->getRawData('runtime')));
+    		$oTaskService->scheduleCommand($oEvent->getRawData('cmd'), strtotime($oEvent->getRawData('rundate').' '.$oEvent->getRawData('runtime')));
     		
     		if ($oTaskService->register($oEvent->getData('taskname')))
     		{

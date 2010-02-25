@@ -51,11 +51,6 @@ body {
 	z-index: -1;
 }
 
-#main_content
-{
-	min-height: 410px;
-}
-
 .med_grid
 {
 	min-height: 300px;
@@ -335,4 +330,9 @@ thead th
 #main_body
 {
 	overflow: hidden;
+}
+
+#maintabs .ui-tabs-panel
+{
+	min-height: 410px;
 }

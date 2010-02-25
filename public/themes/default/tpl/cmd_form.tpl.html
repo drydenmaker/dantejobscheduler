@@ -1,29 +1,60 @@
-
-
-	<form method="POST" action="/tasks/new">
-		<table>
+<hr class="space" />
+<form method="POST" action="/tasks/new">
+	<div class="span-8 first">
+		<table class="span-8 content">
 			<caption>New Scheduled Command</caption>
-			<tr><td>Name: </td><td> <input type="text" name="taskname" maxlength="64"></td></tr>
-			<tr><td>Command: </td><td> <input type="text" name="cmd" maxlength="64"></td></tr>
-			<tr><td>Run Date: </td><td> <input class="xdate" type="text" name="rundate" id="rundate" maxlength="64"></td></tr>
-			<tr><td>Run Time: </td><td> <input class="xtime" type="text" name="runtime" id="runtime" maxlength="64"></td></tr>
+			<tr><td class="form_label">Name: </td><td> <input type="text" name="taskname" maxlength="64"></td></tr>
+			<tr><td class="form_label">Command: </td><td> <input type="text" name="cmd" maxlength="64"></td></tr>
+			<tr><td class="form_label">Run Date: </td><td> <input class="xdate" type="text" name="rundate" id="rundate" maxlength="64" title="MM/DD/YYYY"></td></tr>
+			<tr><td class="form_label">Run Time: </td><td> <input id="xtime" type="text" name="runtime" id="runtime" maxlength="64" title="HH:MM:SS AM"></td></tr>
 			<tr><td colspan="2"><hr></td></tr>
 			<!-- 
 			<tr><td>Expire Date: </td><td> <input class="xdate" type="text" name="expiredate" id="expiredate" maxlength="64"></td></tr>
 			<tr><td>Expire Time: </td><td> <input class="xtime" type="text" name="expiretime" id="expiretime" maxlength="64"></td></tr> 
 			-->
 			
-			<tr><td colspan="2"><input type="submit" name="subit" value="Submit"></td></tr>
+			<tr><td colspan="2"></td></tr>
 		</table>
-	</form>
+	</div>
+	<div class="span-13 prepend-1">
+		
+		<div class="caption">Options</div>
+		<div> priority:  <input type="text" name="x" maxlength="2" size="2" title="1-10"> </div>
+		
+		<div> <input type="checkbox" name="delete_expired_task after" maxlength="64"> delete expired task after </div>
+		<div> <input type="checkbox" name="multiple_instances" maxlength="64"> multiple instances </div>
+		<div> <input type="checkbox" name="run_only_if_idle" maxlength="64"> run only if idle </div>
+		<div> <input type="checkbox" name="run_only_if_network_available" maxlength="64"> run only if network available </div>
+		
+		<div> <input type="checkbox" name="wake_to_run" maxlength="64" disabled="disabled"> wake to run </div>
+		<div> <input type="checkbox" name="allow_demand_start" maxlength="64" disabled="disabled"> allow demand start </div>
+        <div> <input type="checkbox" name="allow_hard_terminate" maxlength="64" disabled="disabled"> allow hard terminate </div>
+        <div> <input type="checkbox" name="disallow_start_if_on_batteries" maxlength="64" disabled="disabled"> disallow start if on batteries </div>
+
+        <div> <input type="checkbox" name="hidden" maxlength="64" disabled="disabled"> hidden </div>
+        <div> <input type="checkbox" name="stop_if_going_on_batteries" maxlength="64" disabled="disabled"> stop if going on batteries </div>
+        <!-- 
+        <tr><td class="form_label">execution time limit: </td><td> <input type="text" name="x" maxlength="64"></td></tr>
+        <tr><td class="form_label">restart count: </td><td> <input type="text" name="x" maxlength="64"></td></tr>
+        <tr><td class="form_label">restart interval: </td><td> <input type="text" name="x" maxlength="64"></td></tr>
+        
+        <tr><td class="form_label">profile id: </td><td> <input type="text" name="x" maxlength="64"></td></tr>
+        <tr><td class="form_label">profile name: </td><td> <input type="text" name="x" maxlength="64"></td></tr>
+        
+        <tr><td class="form_label">Idle Settings: </td><td> <input type="text" name="x" maxlength="64"></td></tr>
+         -->
+        
+	</div>
+	<hr class="space clearfix" />
+	<div class="center"><input type="submit" name="subit" value="Submit"></div>	
+	
+</form>
 	
 	<script type="text/javascript">
 	$(function() {
 		$(".xdate").datepicker();
 		
-		$('.xtime').timepickr({
-			convention: 12 
-		   });
+		$(".xtime").timepickr();
 		
 	});
 	</script>
