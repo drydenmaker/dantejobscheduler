@@ -211,7 +211,7 @@
 		    bgiframe: true,
 		    width: 400,
 		    buttons: {
-		        "Cancel": function() {
+		        "Close": function() {
 		            $(this).dialog("close");
 		        }
 		    },
