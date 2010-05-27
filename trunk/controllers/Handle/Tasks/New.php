@@ -16,26 +16,30 @@ class Handle_Tasks_New implements X_Controller_Handler_Interface
 	 */
 	public function handle(X_Broker_Event_Interface $oEvent)
     {
-    	
-    	if ($oEvent->getData('rundate'))
+        $aReturn = array();
+        $aReturn['message'] = 'Enter a <i>unique</i> task name.';
+    	if ($oEvent->getData('submit') == 'Submit' &&
+    	    $oEvent->getData('taskname'))
     	{
-    		$oTaskService = new X_Scheduler_Ms_Service();
-    		$oTaskService->scheduleCommand($oEvent->getRawData('cmd'), strtotime($oEvent->getRawData('rundate').' '.$oEvent->getRawData('runtime')));
-    		
-    		if ($oTaskService->register($oEvent->getData('taskname')))
-    		{
-    			return '<h3>task '.$oEvent->getData('taskname').' saved</h3>';    		
-    		}
-    		else 
-    		{
-    			return 'unknown error';
-    		}
+    	    if (strlen($oEvent->getData('cmd')))
+    	    {
+    	        $aReturn['message'] = X_Broker::callLoopback('/tasks/cmd/', $oEvent);
+    	    }
+    	    elseif (strlen($oEvent->getData('url')))
+    	    {
+    	        $aReturn['message'] = X_Broker::callLoopback('/tasks/url/', $oEvent);
+    	    }
+    	    else 
+    	    {
+    	        $aReturn['message'] = 'No valid task data.';
+    	    }
+    	    
     	}
     	
-        return X_Array_Tokenizer::combine(array(),
+        return X_Array_Tokenizer::combine($aReturn,
 			  X_Broker::getRegistered('theme_dir').'/tpl/cmd_form.tpl.html');
     }
-
+    
     public function getResponseType()
     {
         return X_Broker_Response::ENCODE_HTML;
