@@ -4,4 +4,6 @@ INSTALLATION
 Simply point your PHP 5.3 enabled IIS at this directory as the root of a website.
 Make sure .\theme\default\tpl\ is writable.
 
+You must have Basic authentication installed.  I have discovered that the web.config is not compatible with IIS 7.5.  So in IIS 7.5 under Authentication you must enable ASP.NET IMpersonation and Basic or Windows Authentication.
+
 Run at your own risk :)
