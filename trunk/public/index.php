@@ -30,9 +30,9 @@ $oBroker = X_Broker::getInstance();
 $oBroker->setHtmlFileContent();
 	
 	// allow debuging
-    $oBroker->setDebug();
+    //$oBroker->setDebug();
     // allow development generation
-    $oBroker->setGenerate();
+    //$oBroker->setGenerate();
     // allow for html to be displayed
     $oBroker->setHtmlFileContent();
 
