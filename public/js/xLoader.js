@@ -172,8 +172,9 @@
 		}
 		
 		crossley.log('laoding url ' + escape($(this).attr('href')));
-
-        oContainer.load(escape($(this).attr('href')), function() {
+		
+		sUrl = escape($(this).attr('href')).replace(' ', '%20');
+        oContainer.load(sUrl, function() {
             $(this).xLoadSetup(options);
         });
 
@@ -184,7 +185,8 @@
         xAM_Element = $(this);
         options = xAM_Element.data('wLoad:options');
         crossley.dir(options, 'Modal Options');
-        $.xModalStack($(this).attr('href'), options);
+        sUrl = escape($(this).attr('href')).replace(' ', '%20');
+        $.xModalStack(sUrl, options);
     }
 
     $.fn.xOnFormLoad = function(thisoptions) {
