@@ -1,6 +1,6 @@
 <?php
 // make sure you comment this file!
-class Handle_Tasks_New implements X_Controller_Handler_Interface
+class Handle_Tasks_Cmd implements X_Controller_Handler_Interface
 {
     /**
 	 * indicate if this is a secure handler 
