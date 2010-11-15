@@ -1,0 +1,338 @@
+/**
+ * dk red #530D0D  #4A1F1C
+ * yellow hightlight #F5FFC0 
+ * 	blue: #D6DFF3
+ * 	LT: #E0D796 Dirty: #ABA375
+ * brown #342A14 #7A7451  
+ * dk brown #1A1202 #4A462F
+ */
+body {
+	background-color: #FFF;
+	font-family:"Lucida Grande", Tahoma, Arial, sans-serif;
+}
+
+#title_header {
+	margin-top: 10px;
+	padding-top: 8px;
+}
+
+#logo {
+	background: transparent url(../images/logo.png) no-repeat scroll 0 0;
+	height: 40px;
+	width: 375px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+#title_header .ui-button
+{
+    border:solid thin Silver;
+}
+
+#tag
+{
+	background: url(images/ribbontag.png) no-repeat scroll center top;
+	width: 115px;
+	height: 155px;
+	left: 15px;
+	top: 15px;
+	z-index: 2;
+	position: relative;
+	margin-bottom: -80px;
+}
+
+#central_content
+{
+	background-color: #1A1202;
+	border-top: 3px Solid  #530D0D;
+	height: 55px;
+	z-index: -1;
+}
+
+.med_grid
+{
+	min-height: 300px;
+}
+
+/*
+ * tag search box
+ */
+#tagsearch_container
+{
+    z-index: 2;
+    position: relative;
+    background: Silver;
+}
+
+#tagsearch_container textarea, #tagsearch_container button
+{
+	background-color: #D6DFF3;
+	margin: 2px;
+	border: thin solid Gray;
+}
+
+#tagsearch_container .results
+{
+	background: White;
+	padding: 2px;
+	border: 2px solid Silver;
+}
+
+#tagsearch_container .results table
+{
+    background: White url(images/fade_long.png) repeat-x scroll 0 0;
+}
+
+#tagsearch_container .animal_program
+{
+	font-weight: bold;
+}
+
+#tagsearch_value
+{
+    width:143px;
+    height:16px;
+    padding:1px 0 1px 0;
+    margin:2px; 
+    vertical-align: baseline;
+}
+
+#tagsearch_results
+{
+    float: left;
+    position: fixed;
+    margin-left: -560px;
+}
+
+/**
+ * data page
+ */
+
+#datamenu_button
+{
+	width: 175px;
+}
+
+#tagsearch_results
+{
+    float: left;
+}
+
+
+
+#tagsearch_results td
+{
+    height: 22px;
+    border-top: thin solid Silver;
+}
+
+tr.not_found, tr.not_found td
+{
+    background: transparent url(images/red_line_highlight.png) repeat-x scroll center;
+    color: #530D0D;
+}
+
+tr.invalid, tr.invalid td  
+{
+    background: transparent url(images/gray_line_highlight.png) repeat-x scroll center;
+    color: Silver;
+}
+
+#tagsearch_container button
+{
+    vertical-align: top;
+}
+
+#tagsearch_container .square_button
+{
+    margin-left: -20px;
+    margin-top: -1px;
+}
+
+/**
+ * semi generic
+ */
+
+.ybg
+{
+	background-color: #D6DFF3;
+}
+
+.topfade
+{
+	background: White url(images/fade_short.png) repeat-x scroll 0 0;
+}
+
+
+#diagran
+{
+    
+    background: transparent url(images/diagram.png) no-repeat scroll  top center;
+    height: 247px;
+    margin: -55px auto 30px auto;
+    display: inline-block;
+	position: relative;
+}
+
+#public_nav
+{
+
+}
+
+.tooltip
+{
+    width: 218px;
+}
+
+.tooltip .pointer_top
+{
+    height: 25px;
+    background: transparent url(images/sq_bubble_top_middle.png) no-repeat scroll top center;
+}
+
+.tooltip .tooltip_body
+{
+    padding: 5px;
+    background: transparent url(images/sq_bubble_border.png) repeat-y scroll center;
+}
+
+.tooltip .tooltip_bottom
+{
+    height: 5px;
+    background: transparent url(images/sq_bubble_bottom.png) no-repeat scroll bottom center;
+}
+
+#packer_tooltip
+{
+    
+}
+
+#originator_tooltip
+{
+
+}
+
+/*               ----------------   GENERAL STYLES  -----------------------     */
+
+.color_tall
+{
+	background: White url(images/fade_long.png) repeat-x scroll 0 0;
+}
+
+.color_short
+{
+	background: White url(images/fade_short.png) repeat-x scroll 0 0;
+}
+
+thead th, thead tr
+{
+	background: transparent !important;
+}
+
+thead th
+{
+	color: white;
+	margin: 2px;
+	font-weight: bold;	
+}
+
+#month-scrollable
+{
+	height: 22px;
+	color: #1A1202;
+	margin: auto;
+}
+
+#month-scrollable .active
+{
+	color: white;
+}
+
+.switch
+{
+	border: 1px solid Gray; 
+}
+
+.month-scoll
+{
+	height: 22px;
+	width: 100px;
+	margin: auto;
+}
+
+.monthlink
+{
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.buttonlink
+{
+	border: 1px solid Transparent; 
+}
+
+#subnav li
+{
+	padding: 4px;
+	margin: 5px;
+	background: ;
+	color: Silver;
+	border: thin solid transparent;
+}
+
+#subnav .ui-state-active
+{
+	color: White;
+	background-color: #1A1202;
+	border: thin inset silver;
+}
+
+#subnav .ui-state-hover
+{
+	background: #1A1202 url(images/ui-bg_highlight-soft_45_1A1202_1x100.png) repeat-x scroll 50% 50% !important;
+	color: White;
+	cursor: pointer;
+}
+
+#user_details_view
+{
+	background: transparent url(images/white30.png) repeat scroll 50% 50%;
+	color: Silver;
+	margin-top: 3px;
+}
+
+.header_button
+{
+	background: White url(images/fade_short.png) repeat-x scroll 0 0;
+	border: thin outset Gray;
+}
+
+.ui-border
+{
+	border: thin solid Gray;
+}
+
+#cert_table
+{
+	line-height: .9;
+}
+
+#master_container
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width: 960px;
+}
+
+#main_body
+{
+	overflow: hidden;
+}
+
+#maintabs .ui-tabs-panel
+{
+	min-height: 410px;
+}

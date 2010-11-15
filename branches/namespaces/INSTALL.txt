@@ -1,0 +1,11 @@
+Dante Job Scheduler
+INSTALLATION
+
+Simply point your PHP 5.3 enabled IIS at this directory as the root of a website.
+Make sure .\theme\default\tpl\ is writable.
+
+You must have Basic authentication installed.  I have discovered that the web.config is not compatible with IIS 7.5.  So in IIS 7.5 under Authentication you must enable ASP.NET IMpersonation and Basic or Windows Authentication.
+Also in your Application pool for IIS 7.5 you should set the Managed Pipeline Mode to 'Clasic' under 'Basic Settings'.
+If you would like to use this as a local site from IE, you should add it to the trusted sites so that the JS will run.
+
+Run at your own risk :)

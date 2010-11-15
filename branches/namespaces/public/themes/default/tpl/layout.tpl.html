@@ -1,0 +1,33 @@
+<div id="maintabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">  		
+		<!-- navigation:START -->
+			<div id="public_nav">
+				<ul>
+					<li><a href="#list_content">Home</a></li>
+					<li><a href="#list_content">List</a></li>
+					<li><a href="#create_content">Create</a></li>
+					<li><a href="#edit_content">Edit</a></li>
+				</ul>
+			</div>
+		<!-- navigation:END -->
+		
+
+			
+			<div id="list_content" class="xdynamic">
+[::main_body::]			
+			</div>
+			
+			<div id="create_content" class="xdynamic">
+[::create::]			
+			</div>
+			
+			<div id="edit_content" class="xdynamic">
+[::edit::]			
+			</div>
+			
+</div>
+<script type="text/javascript">
+$().ready(function(){
+	$("#main_content, #list_content, #create_content, #edit_content").xLoadSetup();
+	$("#maintabs").tabs();
+});
+</script>

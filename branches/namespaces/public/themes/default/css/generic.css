@@ -1,0 +1,820 @@
+@charset "UTF-8";
+/**
+ * Bozeman Baseball Layout
+ * (en) stylesheet for global layout
+ *
+ * @file          global_custom.css
+ */
+/************************************************* SPECIFIC DOM ********/
+.nav-list ul li
+{
+	border-left:1px solid #FFFFFF;
+	border-right:1px solid #AAAAAA;
+	display:inline;
+	float:left;
+	font-size:1em;
+	padding: 5px 9px 5px 9px;
+	list-style-type:none;
+}
+.nav-list ul
+{
+	border-left:1px solid #AAAAAA;
+	border-right:1px solid #FFFFFF;
+	display:inline;
+	float:left;
+	margin : 0 0 0 30px;
+}
+.nav-list ul li a
+{
+	color: #d34d17;
+    text-decoration:none !important;
+	font-weight: bold;
+}
+.nav-list ul li.active 
+{
+	background-color: #272727;
+	border-left:1px solid #444444;
+	border-right:1px solid #888888;
+}
+.nav-list ul li.active a 
+{
+	color: White;
+}
+.nav-list ul li.active a:hover
+{
+	color: Black;
+}
+
+/************************************************* ROUND ********/
+.round10 
+{
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;	
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+/*************************************************  FORMATING ********/
+
+
+/************************************************* scrollable ********/
+div.scrollable
+{ 
+    
+   /* required settings */ 
+   position:relative; 
+   overflow:hidden;    
+} 
+
+/*  
+   root element for scrollable items. Must be absolutely positioned 
+   and it should have a super large width to accomodate scrollable items. 
+   it's enough that you set width and height for the root element and 
+   not for this element. 
+*/ 
+div.scrollable div.items
+{     
+   /* this cannot be too large */ 
+   width:30000px; 
+   position:absolute;
+} 
+
+/*  
+   a single item. must be floated on horizontal scrolling 
+   typically this element is the one that *you* will style 
+   the most. 
+*/ 
+div.scrollable div.items div
+{ 
+   float: left; 
+} 
+/************************************************* generic formatting ********/
+.black-text
+{
+	color:Black;
+}
+
+.black-text a
+{
+	text-decoration: underline;
+	color:Black;
+}
+
+.white-text
+{
+    color: white !important;
+}
+
+.white-text a
+{
+    text-decoration: underline;
+    color: white !important;
+}
+
+.bkbg, .blackbg
+{
+    background-color: Black;
+}
+
+.wtbg, .whitebg
+{
+    background-color: White;
+}
+
+.redbg
+{
+    background-color: #EF3E33;
+}
+
+.svrbg
+{
+    background-color: Silver;
+}
+
+.graybg
+{
+	background-color: Gray;
+}
+
+.push-top
+{
+	margin-top: 4px;
+}
+
+.push-bottom
+{
+	margin-botom: 4px;
+}
+
+.pad-2
+{
+    padding: 2px;
+}
+
+.pad-4
+{
+    padding: 4px;
+}
+
+.pad-8
+{
+    padding: 8px;
+}
+
+.pad-10
+{
+    padding: 10px;
+}
+
+.pad-15
+{
+    padding: 15px;
+}
+
+.padleft-4
+{
+	padding-left: 4px;
+}
+
+.padleft-8
+{
+	padding-left: 8px;
+}
+.padleft-10
+{
+	padding-left: 10px;
+}
+
+.padline-2
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.padline-4
+{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.padline-8
+{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.padline-10
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.padline-30
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.padcol-2
+{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.padcol-4
+{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.padcol-8
+{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.padcol-10
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.padcol-30
+{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.margin-line-2
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.margin-line-8
+{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.margin-line-50
+{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.margin-2
+{
+	margin: 2px;
+}
+
+.margin-4
+{
+	margin: 4px;
+}
+
+.margin-8
+{
+	margin: 8px;
+}
+
+.margin-50
+{
+	margin: 50px;
+}
+
+.collapse-2
+{
+    margin: -2px;
+}
+
+.collapse-4
+{
+    margin: -4px;
+}
+
+.collapse-8
+{
+    margin: -8px;
+}
+.collapse-10
+{
+    margin: -10px;
+}
+
+.collapse-20
+{
+    margin: -20px;
+}
+
+.rightdevide
+{
+    border-right: solid thin Silver;
+    margin-right: 4px !important;
+    padding-right: 5px !important;
+}
+
+.border_bottom_white
+{
+    border-bottom: solid thin White;
+}
+
+.border_white
+{
+    border: solid thin White;
+}
+.border_silver
+{
+    border: solid thin Silver;
+}
+
+.center
+{
+        text-align: center;
+        vertical-align: middle;
+}
+
+.autocenter
+{
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.mcenter
+{
+	margin: auto;
+}
+
+.justify
+{
+	text-align: justify !important;
+}	
+.justify-right
+{
+	text-align: right;
+}
+
+.left
+{
+	float: left;
+}
+.right
+{
+	float: right;
+}
+
+.pointer
+{
+	cursor: pointer;
+}
+
+.noborder
+{
+	border: 0;
+}
+
+/*************************************************  LIST ********/
+ul.hz_list
+{
+    float: left; /* LTR */
+    padding: 0;
+    margin: 0; /* LTR */
+}
+
+ul.hz_list  li
+{
+    display: inline;
+    float: left; /* LTR */
+    font-size: 1.0em;
+    line-height: 1em;
+    list-style-type: none;
+    margin: 0; /* LTR */
+    padding: 0;
+}
+
+ul.vrt_list
+{
+    padding: 0;
+    margin: 0; /* LTR */
+}
+
+ul.vrt_list li
+{
+    line-height: 1em;
+    list-style-type: none;
+}
+
+.list_widget
+{
+
+}
+
+.list_widget h2
+{
+	color: #EEEEEE;
+	text-align: center;
+	font-size: large;
+}
+.list_widget h3
+{
+	color: #888888;
+	margin: 3px 15px 3px 15px;
+	text-align: center;
+	font-size: large;
+}
+
+ul.navlist
+{
+}
+
+ul.navlist li
+{
+	margin: 2px;
+	line-height: 1em;
+    list-style-type: none;
+}
+
+ul.navlist a
+{
+	margin: 2px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/*************************************************  TAGS ********/
+
+h1.tight, h2.tight, h3.tight, h4.tight
+{
+	margin-bottom:2px;
+}
+
+h4.tight
+{
+	font-size: medium;
+	line-height: 1.7em;
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding: 1px;
+	margin: 2px;
+}
+
+h3.tight
+{
+	font-size: 17px;
+	line-height: 14px;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+
+h2.tight
+{
+	font-size: 17px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 22px;
+	font-weight: bold;
+}
+
+h1.tight
+{
+	font-size: 45px;
+	line-height: 44px;
+	letter-spacing: 4px;
+	font-weight: bold;
+}
+
+h6
+{
+        font-family: sans-serif;
+        color: #fff;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.0em;
+        line-height: 1.0em;
+        padding: 2px;
+        text-align: center;
+}
+
+h4
+{
+        font-family: sans-serif;
+        color: #fff;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 22pt;
+        padding: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: left;
+}
+
+h1
+{
+	font-weight:bolder;
+}
+
+textarea.compact
+{
+	width: 175px;
+	height: 150px;
+}
+
+.content_body h1
+{
+	/* color: #486490;*/
+	color: #AD8E79;
+	margin: 8px;
+}
+
+.big
+{
+	font-size: 	large;
+}
+
+.xbig
+{
+    font-size: xx-large;
+}
+
+table 
+{
+    table-layout: fixed
+}
+
+.ui-button
+{
+	text-decoration:none;
+}
+
+.ui-button span.ui-icon {
+	left:0.2em;
+	margin:-8px 5px 0 0;
+	position:absolute;
+	top:50%;
+}
+
+.buttonlink > span
+{
+	padding: 4px;
+}
+
+.buttonlink
+{
+	display: inline-block;
+	text-decoration: none;
+	line-height: 1.1em;
+	overflow: hidden; /* Fix for some browsers pushing buttons down */
+}
+
+.tabicon
+{
+	float: left;
+	margin: 0.5em -14px 0.5em 0;
+}
+
+.wx_tablink .ui-icon
+{
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+td.form_label, td.form_input, td.form_dropdown
+{
+	margin-bottom: 1em;
+	padding: 4px;
+	font-size: 1.2em;
+}
+
+td.form_label, .form_label
+{
+	text-align: right;
+	font-weight: bold;
+}
+
+td.form_label
+{
+	width: 130px;
+}
+
+td.wrap
+{
+	white-space: pre-line;
+}
+
+.form_field label
+{
+	clear:both;
+	color:#444444;
+	display:block;
+	font-size:85%;
+	line-height:100%;
+	margin:0;
+	padding-top:1px;
+}
+
+.form_input, .form_dropdown
+{
+	min-width: 205px;
+	vertical-align: middle;
+}
+
+textarea
+{
+	width: 510px;
+}
+
+textarea.error
+{
+	background-color: #FFBAB1;
+	border-color: #8A1F11;
+}
+
+input.short
+{
+	width: 75px;
+}
+
+input.small
+{
+	width: 25px;
+}
+
+input.medium
+{
+	width: 155px;
+}
+
+input.shortened, form_dropdown select
+{
+	width: 100px;
+}
+
+div.error, div.notice, div.success
+{
+	margin-bottom: 0;
+	padding: 2px;
+}
+
+input.wide, select.wide, textarea.wide
+{
+	width: 100%;
+}
+
+textarea.short
+{
+	height: 125px;
+}
+
+table.control_table
+{
+	padding: 0;
+	margin: 0;
+}
+
+input.error
+{
+	margin: 6px 0 6px 0;
+	padding: 1px 0 1px 0;
+	border-color: #8A1F11;
+	background-color: #FFBAB1;
+}
+
+label.error
+{
+	margin: 0 6px 0 6px;
+	padding: 2px;
+}
+
+td.caption, caption, .caption
+{
+	-webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;	
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	background: transparent url(images/white30.png) repeat scroll 50% 50%;
+	color: Black;
+}
+
+.caption_text
+{
+	float: right;
+}
+
+.error
+{
+	background-color: Transparent;
+	border: none;
+}
+
+div.operations
+{
+	vertical-align: middle;
+}
+.tint
+{
+	background: transparent url(images/white30.png) repeat scroll 50% 50%;
+}
+.light
+{
+	background: transparent url(images/white80.png) repeat scroll 50% 50%;
+}
+.shade
+{
+	background: transparent url(images/transp.png) repeat scroll 50% 50%;
+}
+
+td.checkbox
+{
+	width: 15px;
+	padding-bottom: 8px;
+}
+
+.scroll
+{
+	overflow: scroll;
+}
+
+.hide-overflow
+{
+	overflow: hidden;
+}
+
+.wxContainer
+{
+	margin-top: 2px;
+}
+
+.hidden
+{
+	display: none;
+}
+
+.underline
+{
+	border-bottom: thin solid black;
+}
+
+.display_title
+{
+	font-weight: bold;
+}
+
+.square_button
+{
+    width: 16px;
+    height: 16px;
+    padding: 4px;
+    margin: 2px;
+    cursor: pointer;
+}
+table.summary td
+{
+	text-align: center;
+}
+
+table.summary thead td
+{
+	font-weight: bold;
+}
+
+table.summary
+{
+	border: thin solid black;
+}
+
+tr.ui-tablestripe
+{
+	background-color: #EBF0F9;
+}
+
+/*************************************************  POPOUT ********/
+.popMenu li {
+   list-style: none;
+   text-align: justify;
+}
+.popMenu ul.popOut {
+   position: absolute;
+   z-index: 1;
+   border-bottom: none;
+   margin-top: 2px;
+   padding: 4px;
+   display: none;
+}
+.popMenu ul.popOut a {
+   display: block;
+}
+
+hr.space-4, hr.space-8
+{
+	height: 0px;
+	color: black;
+	border: 0 solid black;
+	margin-bottom: 4px;
+}
+
+hr.space-8
+{
+	margin-bottom: 8px;
+}
